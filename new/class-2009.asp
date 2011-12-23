@@ -1,0 +1,10 @@
+<!--#include file="includes/header.inc"-->
+
+<div class="grid_10 prefix_1 suffix_1">
+	<div class="content">		<h1>2009年才藝班時間表</h1>
+		<p><a href="downloads/art_class_application.doc">才藝報名表</a></p>		<table>			<thead>				<tr>					<td>班別</td>					<td>日期</td>					<td>星期</td>					<td>時間</td>					<td>學費</td>				</tr>			</thead>			<tbody>				<tr>					<td>英文基礎佛學禪修班</td>					<td>20/2-20/3</td>					<td>六</td>					<td>1:30pm － 2:50pm</td>					<td>$20/4週</td>				</tr>					<tr>					<td>英文佛學班</td>					<td>每星期</td>					<td>六</td>					<td>3:00pm － 4:30pm</td>					<td>隨喜贊助</td>				</tr>					<tr>					<td>經典導讀班</td>					<td>17/10-21/11</td>					<td>六</td>					<td>1:30pm － 3:00pm</td>					<td>隨喜贊助</td>				</tr>					<tr>					<td>成人中文班</td>					<td>31/10~5/12</td>					<td>六</td>					<td>1:30pm － 3:00pm</td>					<td>$50/6週</td>				</tr>					<tr>					<td>金剛經導讀(廣東話)</td>					<td>6/12-10/1</td>					<td>日</td>					<td>1:45pm － 2:45pm</td>					<td>隨喜贊助</td>				</tr>					<tr>					<td>中文禪修班</td>					<td>6/12-10/1</td>					<td>日</td>					<td>3:00pm － 4:30pm</td>					<td>隨喜贊助</td>				</tr>					<tr>					<td>瑜珈班</td>					<td>16/10-20/11</td>					<td>五</td>					<td>10:00am - 11:15am</td>					<td>$40/5週</td>				</tr>					<tr>					<td>繪畫班</td>					<td>22/11-10/1</td>					<td>日</td>					<td>2:00pm － 3:30pm</td>					<td>$65/6週</td>				</tr>					<tr>					<td>書法班</td>					<td>18/10-28/11</td>					<td>日</td>					<td>2:00pm － 3:30pm</td>					<td>$55/6週</td>				</tr>					<tr>					<td>中華學校</td>					<td>10/10~5/12<br/>30/1-27/3</td>					<td>六</td>					<td>9:15am － 12:15pm</td>					<td>詳見簡章</td>				</tr>				</tbody>		</table>				<p>備註:社教活動課程將視狀況做適當調整，恕不另行通知</p>				<br/><br/>
+		</div>
+</div>
+<!--#include file="includes/right-col.inc"-->	
+
+<!--#include file="includes/footer.inc"-->	
