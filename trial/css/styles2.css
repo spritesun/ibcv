@@ -1,0 +1,253 @@
+@import url('reset.css');
+@import url('960.css');
+
+/*
+#E49521: orange
+*/
+
+body
+{
+	font-size: 62.5%;
+	font-family:Arial;
+	background: #666;		
+	color: #333;}
+
+p, ul, dl, ol, table
+{
+	font-size: 1.0em;
+	line-height: 1.4em;
+}
+
+h1, p, ul, dl, table
+{
+	margin-bottom: 0.8em;
+}
+table{	border-collapse: collapse;	border: 1px dotted #ccc;
+}thead td{	font-weight: bold;
+}td{
+	border: 1px dotted #ccc;	padding: 3px 10px 3px 5px;
+}h1,h2 {
+	color: #e49521;
+}
+h1
+{
+	font-size: 2.2em;
+}
+h2{	font-size: 1.6em;	margin: 1em 0 0.5em;
+}
+p
+{
+	margin-bottom: 0.5em;
+}
+
+dt
+{
+	float: left;
+}
+
+dd
+{
+	margin-left: 50px;
+}ol li{	list-style: decimal;
+	margin-left: 25px;	margin-bottom: 0.5em;
+}.show_grid {
+	background: #fff url(../img/16_col.gif) repeat-y;
+}
+
+.left
+{
+	float: left;
+}
+
+.right
+{
+	float: right;
+}
+.page{	background: white;	padding-top:10px;
+}
+/* top
+--------------------------*/
+.logo
+{
+	margin-bottom: 5px;
+}
+
+#nav,#nav * {margin:0px;padding:0px;border:0px;}
+
+#nav {
+ font-size:10pt;font-family: "·s²Ó©úÅé";line-height: 24px; list-style-type: none; background:/*#402600*/#f2f4e0;
+}
+
+#nav a {
+ display: block; width: 92px; text-align:center;
+}
+
+#nav a:link {
+ color:/*#402600*/#fff; text-decoration:none;
+}
+#nav a:visited {
+ color:/*#402600*/#fff;text-decoration:none;
+}
+#nav a:hover {
+ color:#FFF;text-decoration:none;font-weight:bold;
+}
+
+#nav li {
+ float: left; width: 92px; background:/*#FFCD80*/ url(../img/nav_button_off.jpg) #c2b384; background-repeat:no-repeat;
+}
+#nav li a:hover{
+ background:/*#E39520*/ url(../img/nav_button_on.jpg) #b3ab79; COLOR: #fff
+}
+#nav li ul {
+ display: none;
+}
+#nav li ul li{
+ float: left; width: 180px;
+ background: /*#FFF5E6*/#f2f4e0; COLOR: #000; 
+}
+
+#nav li ul a{
+ display:block; width: 156px;text-align:left; padding-left:24px;
+}
+
+#nav li ul a:link {
+ color:#402600; text-decoration:none;
+}
+#nav li ul a:visited {
+ color:#402600;text-decoration:none;
+}
+#nav li ul a:hover {
+/* color:#FFE5BF;text-decoration: none;font-weight:normal;
+ background:#E39520;*/
+ BACKGROUND: url(../img/nav_sub_on.jpg) #f2f4e0 no-repeat; COLOR: #000
+}
+
+#nav li:hover  ul {
+ display:block;line-height: 27px; list-style-type: none;text-align:left;
+ left:auto; width: 180px; position: absolute;
+}
+
+/* the following stuff is the fix for IE6-. */
+#nav li.sfhover ul li{
+ float: left; width: 180px;
+ background: /*#FFF5E6*/#f2f4e0; COLOR: #000; 
+}
+
+#nav li.sfhover ul a{
+ display:block; width: 156px;text-align:left; padding-left:24px;
+}
+
+#nav li.sfhover ul a:link {
+ color:#402600; text-decoration:none;
+}
+#nav li.sfhover ul a:visited {
+ color:#402600;text-decoration:none;
+}
+#nav li.sfhover ul a:hover {
+/* color:#FFE5BF;text-decoration: none;font-weight:normal;
+ background:#E39520;*/
+ BACKGROUND: url(../img/nav_sub_on.jpg) #f2f4e0 no-repeat; COLOR: #000
+}
+
+#nav li.sfhover  ul {
+ display:block;line-height: 27px; list-style-type: none;text-align:left;
+ left:auto; width: 180px; position: absolute;
+}
+/* IE 6- fix ends here */
+#content {
+ clear: left; 
+}
+
+/* middle
+--------------------------*/.middle{	padding-top:10px;
+}.content{		margin:10px 0 20px;	padding-bottom:20px;}.content ul li a
+{
+	text-decoration: none;
+	color: #E49521;
+}
+
+.content ul li a:hover
+{
+	text-decoration: none;
+	color: #FF0000;
+}/* slideshow */
+.slideshow img
+{
+	border: 1px solid #ccc;	padding: 1px;
+}
+
+/* latest news list */
+.latest_news{
+	margin: 0;	padding:0 9px;	border-color: #ccc;	border-style: none solid;	border-width: 1px;
+}.latest_news ul{}
+.latest_news ul li
+{
+	display: block;
+	border-top: 1px solid #ccc;
+	padding: 5px 10px;
+}
+
+.latest_news ul li span 
+{
+	float: right;	text-align: right;
+	color: #E49521
+}.latest_news ul li a:hover span {	color: #FF0000;	text-decoration: none;
+}.whatsnew ul li {
+	display: block;
+	border-top: 1px solid #ccc;
+	padding: 5px 10px;	color: #000000;}.whatsnew ul li span{
+	display: block;
+	float: left;
+	text-align:left;
+	border-top: 1px solid #ccc;
+	padding: 5px 10px;	color: #000000;}
+/* right column */.right_col .content{	margin-left: 10px;	margin-right: 10px;}/* Modified by: Sampson on Jan 03, 2010 */ /* Description: Put future news on right column */.right_col ul{}
+.right_col ul li
+{
+	display: block;
+	border-top: 1px solid #ccc;
+	padding: 5px 10px;
+}
+
+.right_col ul li span
+{
+	float: right;	text-align: right;
+	color: #E49521
+}/* chinese school */.chinese_school_timetable{	margin-top: 20px;	padding-top: 20px;	border-top: 1px solid #ccc;
+	color: #cc9966;}.chinese_school_timetable dd{	margin-left: 100px;
+}/* bottom
+--------------------------*/
+.bottom
+{	margin-top:10px;	padding:10px 0;	border-top: 1px solid #ccc;
+}
+
+.bottom .heading
+{
+	font-size: 1.5em;
+	line-height: 1.5em;	margin-bottom: 5px;
+	color: #E49521;
+}
+
+.bottom .center
+{	margin:0 8px;	padding:0 17px 5px;	border-left: 1px solid #ccc;	border-right: 1px solid #ccc;
+}
+
+.bottom a.more
+{
+	font-size: 1.3em;	float:right;
+}
+
+.bottomLine
+{
+	width:650px;
+}
+
+/* footer
+--------------------------*/
+.footer
+{
+	text-align: center;
+	line-height: 1.5em;
+	font-size: 1.2em;
+	color: white;
+}
