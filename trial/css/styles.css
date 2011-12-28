@@ -10,7 +10,10 @@ body
 	font-size: 67.5%;
 	font-family:Verdana, "MS Hei", sans-serif;	
 	background: #666;		
-	color: #333;}a
+	color: #333;
+}
+
+a
 {
 	text-decoration: none;
 	color: #E49521;
@@ -32,17 +35,35 @@ h1, p, ul, dl, table
 {
 	margin-bottom: 0.8em;
 }
-table{	border-collapse: collapse;	border: 1px dotted #ccc;
-}thead td{	font-weight: bold;
-}td{
-	border: 1px dotted #ccc;	padding: 3px 10px 3px 5px;
-}h1,h2 {
+
+table
+{
+	border-collapse: collapse;
+	border: 1px dotted #ccc;
+}
+
+thead td
+{
+	font-weight: bold;
+}
+
+td
+{
+	border: 1px dotted #ccc;
+	padding: 3px 10px 3px 5px;
+}
+
+h1,h2 {
 	color: #e49521;
 }h1
 {
 	font-size: 2.2em;
 }
-h2{	font-size: 1.6em;	margin: 1em 0 0.5em;
+
+h2
+{
+	font-size: 1.6em;
+	margin: 1em 0 0.5em;
 }p
 {
 	margin-bottom: 0.5em;
@@ -56,9 +77,16 @@ dt
 dd
 {
 	margin-left: 50px;
-}ol li{	list-style: decimal;
-	margin-left: 25px;	margin-bottom: 0.5em;
-}.show_grid {
+}
+
+ol li
+{
+	list-style: decimal;
+	margin-left: 25px;
+	margin-bottom: 0.5em;
+}
+
+.show_grid {
 	background: #fff url(../img/16_col.gif) repeat-y;
 }
 
@@ -71,7 +99,11 @@ dd
 {
 	float: right;
 }
-.page{	background: white;	padding-top:10px;
+
+.page
+{
+	background: white;
+	padding-top:10px;
 }/* top
 --------------------------*/.logo
 {
@@ -89,7 +121,8 @@ dd
  
 .nav
 {
-	background: url(../img/nav-bg.png) repeat-x left top;	z-index: 500;
+	background: url(../img/nav-bg.png) repeat-x left top;
+	z-index: 500;
 }
 
 .nav ul
@@ -98,22 +131,69 @@ dd
 }
 
 .nav ul li
-{	position: relative;
+{
+	position: relative;
 	display: block;
-	float: left;	margin-top: 5px;	z-index: 500;
-}.nav ul li a
-{	display: block;	padding: 5px 8px;
+	float: left;
+	margin-top: 5px;
+	z-index: 500;
+}
+
+.nav ul li a
+{
+	display: block;
+	padding: 5px 7px;
 	color:white;
-}.nav ul li a:hover{	background: #E49521;	text-decoration: none;
-}/* 2nd level and beyond */.nav li ul{	position: absolute;	left: -200em;	z-index: 10;	font-size: 0.9em;
+}
+
+.nav ul li a:hover
+{
+	background: #E49521;
+	text-decoration: none;
+}
+
+/* 2nd level and beyond */
+.nav li ul
+{
+	position: absolute;
+	left: -200em;
+	z-index: 10;
+	font-size: 0.9em;
 	border: 1px solid white;
-}.nav li li{	margin: 0;	width: 180px;
+}
+
+.nav li li
+{
+	margin: 0;
+	width: 180px;
 }.nav li li a
-{	display: block;	background: #9D9E9D;
-}.nav 	li.over ul{	left: 0;	z-index: 500;
-}.nav li li a:hover{}/* middle
---------------------------*/.middle{	padding-top:10px;
-}.content{		margin:10px 0 20px;	padding-bottom:20px;	line-height:1.9em;}/* slideshow */
+{
+	display: block;
+	background: #9D9E9D;
+}
+
+.nav 	li.over ul
+{
+	left: 0;
+	z-index: 500;
+}
+
+.nav li li a:hover
+{
+}/* middle
+--------------------------*/
+.middle
+{
+	padding-top:10px;
+}
+.content
+{	
+	margin:10px 0 20px;
+	padding-bottom:20px;
+	line-height:1.9em;
+}
+
+/* slideshow */
 #slide-images{
     position:relative;
     display:block;
@@ -138,9 +218,18 @@ dd
     background-color:#FFFFFF;
 }
 /* latest news list */
-.latest_news{
-	margin: 0;	padding:0 9px;	border-color: #ccc;	border-style: none solid;	border-width: 1px;
-}.latest_news ul{}
+.latest_news
+{
+	margin: 0;
+	padding:0 9px;
+	border-color: #ccc;
+	border-style: none solid;
+	border-width: 1px;
+}
+
+.latest_news ul
+{
+}
 
 .latest_news ul li
 {
@@ -151,18 +240,48 @@ dd
 
 .latest_news ul li span 
 {
-	float: right;	text-align: right;
+	float: right;
+	text-align: right;
 	color: #E49521
-}.latest_news ul li a:hover span {	color: #FF0000;	text-decoration: none;
-}.whatsnew ul li {
+}
+
+
+
+.latest_news ul li a:hover span 
+{
+	color: #FF0000;
+	text-decoration: none;
+}
+
+.whatsnew ul li 
+{
 	display: block;
 	/*border-top: 1px solid #ccc;*/
-	padding: 5px 10px;	color: #000000;}.whatsnew ul li span{
+	padding: 5px 10px;
+	color: #000000;
+}
+
+.whatsnew ul li span
+{
 	display: block;
 	float: left;
 	text-align:left;
 	/*border-top: 1px solid #ccc;*/
-	padding: 5px 10px;	color: #000000;}/* right column */.right_col .content{	margin-left: 10px;	margin-right: 10px;}/* Modified by: Sampson on Jan 03, 2010 */ /* Description: Put future news on right column */.right_col ul{}.right_col ul li
+	padding: 5px 10px;
+	color: #000000;
+}
+/* right column */
+.right_col .content
+{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* Modified by: Sampson on Jan 03, 2010 */ 
+/* Description: Put future news on right column */
+.right_col ul
+{
+}.right_col ul li
 {
 	display: block;
 	border-top: 1px solid #ccc;
@@ -171,11 +290,29 @@ dd
 
 .right_col ul li span
 {
-	float: right;	text-align: right;
+	float: right;
+	text-align: right;
 	color: #E49521
-}/* chinese school */.chinese_school_timetable{	margin-top: 20px;	padding-top: 20px;	border-top: 1px solid #ccc;
-	color: #cc9966;}.chinese_school_timetable dd{	margin-left: 100px;
-}/* News Page */#newsLists
+}
+
+
+
+/* chinese school */
+.chinese_school_timetable
+{
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid #ccc;
+	color: #cc9966;
+}
+
+.chinese_school_timetable dd
+{
+	margin-left: 100px;
+}
+
+/* News Page */
+#newsLists
 {
 	padding-left:0px;
 	margin-left:0px;
@@ -246,26 +383,55 @@ dd
 	width: 650px;
 
 }
-.newsImgContainer{	width:310px;	float:left;}.newsImg{	width:300px;	height:169px;}.newsDescr{	width:300px;	float:left;	padding-left:20px;}/* bottom
+
+.newsImgContainer
+{
+	width:310px;
+	float:left;
+}
+
+.newsImg
+{
+	width:300px;
+	height:169px;
+}
+
+.newsDescr
+{
+	width:300px;
+	float:left;
+	padding-left:20px;
+}
+/* bottom
 --------------------------*/
 .bottom
-{	margin-top:10px;	padding:10px 0;	border-top: 1px solid #ccc;
+{
+	margin-top:10px;
+	padding:10px 0;
+	border-top: 1px solid #ccc;
 }
 
 .bottom .heading
 {
 	font-size: 1.5em;
-	line-height: 1.5em;	margin-bottom: 5px;
+	line-height: 1.5em;
+	margin-bottom: 5px;
 	color: #E49521;
 }
 
 .bottom .center
-{	margin:0 8px;	padding:0 17px 5px;	border-left: 1px solid #ccc;	border-right: 1px solid #ccc;
+{
+
+	margin:0 8px;
+	padding:0 17px 5px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
 }
 
 .bottom a.more
 {
-	font-size: 1.3em;	float:right;
+	font-size: 1.3em;
+	float:right;
 }
 
 .bottomLine
