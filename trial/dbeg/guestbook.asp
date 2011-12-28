@@ -64,7 +64,7 @@ Dim strSQL			'Holds the SQL query for the database
 Set adoCon = Server.CreateObject("ADODB.Connection")
 
 'Set an active connection to the Connection object using a DSN-less connection
-adoCon.Open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("guestbook.mdb")
+adoCon.Open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../../_private/ibcv.mdb")
 
 'Set an active connection to the Connection object using DSN connection
 'adoCon.Open "DSN=guestbook"
