@@ -13,8 +13,6 @@
 	<script type="text/javascript" src="js/slimbox2.js"></script>
 	<script src="js/prototype.js" type="text/javascript"></script>
 	<script src="js/scriptaculous.js" type="text/javascript"></script>
-	<script text="text/javascript" src="js/simple-slide-show.js"></script>
-	
 	
 	<%
 		function GetCnDay(i)
@@ -57,7 +55,7 @@
         <div class="left"><img src="img/nav-left.png"></div>
         <div class="right"><img src="img/nav-right.png"></div>
         <ul>
-          <li><a href="#">网站内容管理</a></li>
+          <li><a href="#">網站內容管理</a></li>
         </ul>
       </div>
     </div>
