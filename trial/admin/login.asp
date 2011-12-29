@@ -4,7 +4,7 @@
 dim Username,Password,Validated
 Username = "ibcv"
 Password = "6002"
-Validated = "OK"
+Validated = "IBCVOK"
 if Strcomp(Request.Form("User"),Username,1)=0 AND Request.Form("password") = Password then
   'Set the validation cookie and redirect the user to the original page.
   Response.Cookies("ValidUser") = Validated
@@ -19,20 +19,18 @@ if Strcomp(Request.Form("User"),Username,1)=0 AND Request.Form("password") = Pas
 else
   'Only present the failure message if the user typed in something.
   if Request.Form("User") <> "" then
-    Response.Write "<h3>Authorization Failed.</h3>" & "<br>" & "Please try again.<br>&#xa0;<br>"
+    Response.Write "<div class='error'>用户名或密碼错误</div>"
   end if
 end if
 %>
 
 <div class="grid_16">
   <FORM ACTION=<%Response.Write "admin/login.asp?"&Request.QueryString%> method="post">
-    <h3>登入</h3>
-    <p>	
-    用户名: 
+    <h2>用户名: </h2>
     <INPUT TYPE="text" NAME="User" VALUE='' size="20"></INPUT>
-    密碼: 
+    <h2>密碼: </h2>
     <INPUT TYPE="password" NAME="password" VALUE='' size="20"></INPUT>
-    <INPUT TYPE="submit" VALUE="login"></INPUT>
+    <INPUT TYPE="submit" VALUE="登入網站管理"></INPUT>
   </FORM>
 </div>
 

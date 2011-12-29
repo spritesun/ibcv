@@ -55,7 +55,8 @@
         <div class="left"><img src="img/nav-left.png"></div>
         <div class="right"><img src="img/nav-right.png"></div>
         <ul>
-          <li><a href="#">網站內容管理</a></li>
+          <li><a href="./admin/default.asp">網站管理首頁</a></li>
+          <li><a href="./admin/logout.asp">登出</a></li>
         </ul>
       </div>
     </div>

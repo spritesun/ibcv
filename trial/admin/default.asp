@@ -2,7 +2,7 @@
 
 <%
 dim Validated
-Validated = "OK"
+Validated = "IBCVOK"
 if Request.Cookies("ValidUser") <> Validated then
   'Construct the URL for the current page.
   dim s
