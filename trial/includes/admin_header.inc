@@ -55,7 +55,20 @@
         <div class="left"><img src="img/nav-left.png"></div>
         <div class="right"><img src="img/nav-right.png"></div>
         <ul>
-          <li><a href="./admin/default.asp">網站管理首頁</a></li>
+          <li>
+            <a href="./admin/activities.asp">通告管理</a>
+            <ul>
+              <li><a href="./admin/activities.asp">通告列表</a></li>
+              <li><a href="./admin/new_activity.asp">創建通告</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="./admin/news.asp">新聞管理</a>
+            <ul>
+              <li><a href="./admin/news.asp">新聞列表</a></li>
+              <li><a href="./admin/new_news.asp">創建新聞</a></li>
+            </ul>
+          </li>
           <li><a href="./admin/logout.asp">登出</a></li>
         </ul>
       </div>
