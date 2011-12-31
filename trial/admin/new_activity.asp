@@ -5,16 +5,16 @@
 
   <form action="./admin/create_activity.asp" method="post">
     <h2>通告名稱</h2>
-    <input type="text"name="activity[name]">
-    <h2>日期</h2>
-    <input type="text"name="activity[date]">
-    <h2>時間</h2>
-    <input type="text"name="activity[time]">
-    <h2>地點</h2>
-    <input type="text"name="activity[venue]">
+    <input type="text" name="name">
+    <h2>日期</h2>             
+    <input type="text" name="date">
+    <h2>時間</h2>             
+    <input type="text" name="time">
+    <h2>地點</h2>             
+    <input type="text" name="venue">
     <h2>内容介紹</h2>
     <textarea rows="20" cols="60"></textarea>
-    <input type="submit" value="提交通告"></input>
+    <input type="submit" value="提交通告" name="content"></input>
   </form>
 
 </div>
