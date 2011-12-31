@@ -482,3 +482,7 @@ input[type="submit"] {
 form {
   margin-left: 20px;
 }
+
+textarea {
+  font-size: 150%;
+}

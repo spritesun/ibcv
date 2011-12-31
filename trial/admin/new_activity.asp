@@ -1,6 +1,22 @@
 <!--#include file="../includes/login_filter.inc"-->	
 <!--#include file="../includes/admin_header.inc"-->	
 
-建設中
+<div class="grid_14 prefix_1 suffix_1">
+
+  <form action="./admin/create_activity.asp" method="post">
+    <h2>通告名稱</h2>
+    <input type="text"name="activity[name]">
+    <h2>日期</h2>
+    <input type="text"name="activity[date]">
+    <h2>時間</h2>
+    <input type="text"name="activity[time]">
+    <h2>地點</h2>
+    <input type="text"name="activity[venue]">
+    <h2>内容介紹</h2>
+    <textarea rows="20" cols="60"></textarea>
+    <input type="submit" value="提交通告"></input>
+  </form>
+
+</div>
 
 <!--#include file="../includes/footer.inc"-->
