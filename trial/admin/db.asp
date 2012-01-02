@@ -1,3 +1,4 @@
+<!--#include file="../includes/login_filter.inc"-->	
 <%
 Dim adoCon, rsGuestbook, strSQL
 
