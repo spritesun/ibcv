@@ -13,8 +13,8 @@
     <h2>地點</h2>             
     <input type="text" name="venue">
     <h2>内容介紹</h2>
-    <textarea rows="20" cols="60"></textarea>
-    <input type="submit" value="提交通告" name="content"></input>
+    <textarea rows="20" cols="60" name="content"></textarea>
+    <input type="submit" value="提交通告"></input>
   </form>
 
 </div>

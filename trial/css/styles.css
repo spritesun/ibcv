@@ -40,6 +40,7 @@ table
 {
 	border-collapse: collapse;
 	border: 1px dotted #ccc;
+	line-height: 20px;
 }
 
 thead td

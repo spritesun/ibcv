@@ -16,31 +16,23 @@
   </tr>
 </thead>
 <tbody>
-  
-  <tr>
-    <td>光明燈圓燈總迴向法會</td>
-    <td>2011年1月15日</td>
-    <td>10:00am</td>
-    <td>佛光緣美術館, 博士山佛光緣</td>
-    <td>
-      <a href="./activities.asp?id=1">查看</a>
-      <a href="./admin/edit_activities.asp?id=1">修改</a>
-      <a href="./admin/delete_activities.asp?id=1">删除</a>
-    </td>
-  </tr>
-  
-  <tr>
-    <td>光明燈圓燈總迴向法會</td>
-    <td>2011年1月15日</td>
-    <td>10:00am</td>
-    <td>佛光緣美術館, 博士山佛光緣</td>
-    <td>
-      <a href="./activities.asp?id=1">查看</a>
-      <a href="./admin/edit_activities.asp?id=1">修改</a>
-      <a href="./admin/delete_activities.asp?id=1">删除</a>
-    </td>
-  </tr>
-  
+<!--#include file="../includes/function_fmt.inc"-->	
+<!--#include file="../includes/function_execute_sql.inc"-->	
+<%
+dim activities
+set activities = execute_sql("select * from activities;")
+
+do while not activities.EOF
+  dim rowHTMLStr
+  rowHTMLStr = fmt("<tr><td>%x</td><td>%x</td><td>%x</td><td>%x</td><td><a href='./activities.asp?id=%x'>查看</a> <a href='./admin/edit_activities.asp?id=%x'>修改</a> <a href='./admin/delete_activities.asp?id=%x'>删除</a></td></tr>", Array(activities("name"), activities("date"), activities("time"), activities("venue"), activities("ID_no"), activities("ID_no"), activities("ID_no")))
+  Response.Write rowHTMLStr
+  activities.MoveNext
+loop
+
+activities.Close
+set activities = Nothing
+set adoCon = Nothing
+%>
 </tbody>
 </table>
 
