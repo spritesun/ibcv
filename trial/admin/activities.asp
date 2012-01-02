@@ -24,7 +24,7 @@ set activities = execute_sql("select * from activities;")
 
 do while not activities.EOF
   dim rowHTMLStr
-  rowHTMLStr = fmt("<tr><td>%x</td><td>%x</td><td>%x</td><td>%x</td><td><a href='./activities.asp?id=%x'>查看</a> <a href='./admin/edit_activities.asp?id=%x'>修改</a> <a href='./admin/delete_activity.asp?id=%x'>删除</a></td></tr>", Array(activities("name"), activities("date"), activities("time"), activities("venue"), activities("ID_no"), activities("ID_no"), activities("ID_no")))
+  rowHTMLStr = fmt("<tr><td>%x</td><td>%x</td><td>%x</td><td>%x</td><td><a href='./activity.asp?id=%x'>查看</a> <a href='./admin/edit_activity.asp?id=%x'>修改</a> <a href='./admin/delete_activity.asp?id=%x'>删除</a></td></tr>", Array(activities("name"), activities("date"), activities("time"), activities("venue"), activities("ID_no"), activities("ID_no"), activities("ID_no")))
   Response.Write rowHTMLStr
   activities.MoveNext
 loop
