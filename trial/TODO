@@ -4,16 +4,13 @@
 # - login/logout page
 #- activities /list, /view specify one, /edit, /delete, /style
 # - refactor new/edit, create/save
+# - fix existing ui issue
+# - refactor relative path  
 
-- google map link for venue
-- write pure html/css/js stuff first
-- translate it to asp dynamic content
-- fix existing ui issue
-- merge with existing content:news & activities
-- refactor relative path  
+- upload image for activity, view image, edit image, delete
 
+- activities, 1 image
 - news , 3 images
-- activities, 1 images
 
 - plain text
 - 2011 letter could remove
@@ -23,3 +20,7 @@
 - activities, news, 1 attachment.
 - about us, english/chinese content integration, translation.
 - english, chinese content.
+- draft status?
+
+- merge with existing content:news & activities
+- google map link for venue

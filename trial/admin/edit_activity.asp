@@ -15,6 +15,7 @@ if (Request.QueryString("id")<>"") then
 end if
 
 %>
+  <!--form action="./admin/save_activity.asp" method="post" enctype="multipart/form-data" accept-charset="utf-8"-->
   <form action="./admin/save_activity.asp" method="post">
     <input type="hidden" name="id" value="<%=Request.QueryString("id")%>"/>
     <h2>通告名稱</h2>
@@ -27,6 +28,9 @@ end if
     <input type="text" name="venue" value="<%=venue%>"/>
     <h2>内容介紹</h2>
     <textarea rows="20" cols="60" name="content"><%=content%></textarea>
+    <h2>通告圖片</h2>
+    <input type="file" name="image1"/>
+    
     <input type="submit" value="提交通告"/>
   </form>
 
