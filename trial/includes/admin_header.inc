@@ -59,7 +59,7 @@
             <a href="./admin/activities.asp">通告管理</a>
             <ul>
               <li><a href="./admin/activities.asp">通告列表</a></li>
-              <li><a href="./admin/new_activity.asp">創建通告</a></li>
+              <li><a href="./admin/edit_activity.asp">創建通告</a></li>
             </ul>
           </li>
           <li>

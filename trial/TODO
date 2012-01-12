@@ -2,12 +2,8 @@
 # - spike db solution
 # - copy content from new to trival
 # - login/logout page
-- activities /list, /view specify one, /edit, /delete, /style
-- refactor new/edit, create/save
-- more comprehensive view activity page?
-
-- WYSIWYG or not?
-http://www.webdesignerdepot.com/2008/12/20-excellent-free-rich-text-editors/
+#- activities /list, /view specify one, /edit, /delete, /style
+# - refactor new/edit, create/save
 
 - google map link for venue
 - write pure html/css/js stuff first
@@ -15,3 +11,15 @@ http://www.webdesignerdepot.com/2008/12/20-excellent-free-rich-text-editors/
 - fix existing ui issue
 - merge with existing content:news & activities
 - refactor relative path  
+
+- news , 3 images
+- activities, 1 images
+
+- plain text
+- 2011 letter could remove
+- images news, 
+- navigation:school, activity, news
+- filter venue inside
+- activities, news, 1 attachment.
+- about us, english/chinese content integration, translation.
+- english, chinese content.
