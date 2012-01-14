@@ -16,7 +16,7 @@ Session.CodePage  = 65001
   ' ****************************************************
 
   Dim uploadsDirVar
-  uploadsDirVar = Server.MapPath("../../_private/uploads")
+  uploadsDirVar = Server.MapPath("../../uploads")
   'uploadsDirVar = "d:\inetpub\webmailasp\database\tempUploads" 
   
 
