@@ -16,7 +16,7 @@ end if
 
 %>
   <!--form action="./admin/save_activity.asp" method="post" enctype="multipart/form-data" accept-charset="utf-8"-->
-  <form action="./admin/save_activity.asp" method="post">
+  <form action="./admin/save_activity.asp" method="post" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<%=Request.QueryString("id")%>"/>
     <h2>通告名稱</h2>
     <input type="text" name="name" value="<%=name%>"/>
