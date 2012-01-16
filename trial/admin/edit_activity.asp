@@ -13,18 +13,17 @@ if (Request.QueryString("id")<>"") then
   venue = activity("venue")
   content = activity("content")
 end if
-
 %>
-  <!--form action="./admin/save_activity.asp" method="post" enctype="multipart/form-data" accept-charset="utf-8"-->
-  <form action="./admin/save_activity.asp" method="post" enctype="multipart/form-data">
+
+  <form action="./admin/save_activity.asp" method="post" enctype="multipart/form-data"  accept-charset="utf-8">
     <input type="hidden" name="id" value="<%=Request.QueryString("id")%>"/>
     <h2>通告名稱</h2>
     <input type="text" name="name" value="<%=name%>"/>
-    <h2>日期</h2>             
+    <h2>日期</h2>
     <input type="text" name="date" value="<%=date_%>"/>
-    <h2>時間</h2>             
+    <h2>時間</h2>
     <input type="text" name="time" value="<%=time_%>"/>
-    <h2>地點</h2>             
+    <h2>地點</h2>
     <input type="text" name="venue" value="<%=venue%>"/>
     <h2>内容介紹</h2>
     <textarea rows="20" cols="60" name="content"><%=content%></textarea>
