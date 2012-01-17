@@ -31,6 +31,10 @@ if id_="" then
     set result = execute_sql(strSQL)
     id_ = result("max_id")
   
+    strSQL = "SELECT max(ID_no) as max_id FROM activities;"
+    set result = execute_sql(strSQL)
+    id_ = result("max_id")
+  
     splitted_image_file_name = Split(Upload.UploadedFiles("image1").FileName, ".")
     image_file_extension = splitted_image_file_name(UBound(splitted_image_file_name))
     image_dest_name = "activity_" & id_ & "_image1." & image_file_extension
