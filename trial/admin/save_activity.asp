@@ -46,15 +46,20 @@ if id_="" then
     set result = execute_sql(strSQL)
   end if
 else
-  splitted_image_file_name = Split(Upload.UploadedFiles("image1").FileName, ".")
-  image_file_extension = splitted_image_file_name(UBound(splitted_image_file_name))
-  image_dest_name = "activity_" & id_ & "_image1." & image_file_extension
-  
-  Upload.UploadedFiles("image1").FileName = image_dest_name
-  Upload.Save(uploadsDirVar)
-  
-  strSQL = fmt("UPDATE activities SET [name] = '%x', [date] = '%x', [time] = '%x', [venue] = '%x', [content] = '%x', [image1_file_name] = '%x' where ID_no = %x;", Array(name, date_, time_, venue, content, image_dest_name, id_))
+  strSQL = fmt("UPDATE activities SET [name] = '%x', [date] = '%x', [time] = '%x', [venue] = '%x', [content] = '%x' where ID_no = %x;", Array(name, date_, time_, venue, content, id_))
   set result = execute_sql(strSQL)
+  
+  if Upload.UploadedFiles.Exists("image1") then
+    splitted_image_file_name = Split(Upload.UploadedFiles("image1").FileName, ".")
+    image_file_extension = splitted_image_file_name(UBound(splitted_image_file_name))
+    image_dest_name = "activity_" & id_ & "_image1." & image_file_extension
+  
+    Upload.UploadedFiles("image1").FileName = image_dest_name
+    Upload.Save(uploadsDirVar)
+    
+    strSQL = fmt("update activities set [image1_file_name] = '%x' where ID_no = %x", Array(image_dest_name, id_))
+    set result = execute_sql(strSQL)
+  end if
 end if
 
 set result = Nothing
