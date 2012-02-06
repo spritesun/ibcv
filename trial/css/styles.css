@@ -487,3 +487,19 @@ form {
 textarea {
   font-size: 150%;
 }
+
+.edit_image img {
+  width:280px;
+}
+
+.edit_image a {
+  font-size: 150%;
+  color: red;
+  font-weight: bold;
+}
+
+.edit_image a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
