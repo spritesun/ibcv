@@ -9,13 +9,13 @@
 # - upload image for /new activity, /view image, /edit image, /delete image
 # - activities, 1 image
 # - 2011 letter could remove
-
 # - activities, 1 attachment./new /edit /download /delete
+# - images news, 
 
 - news, 1 attachment. 
 
 - news , 3 images
-- images news, 
+
 
 - navigation:school, activity, news
 - filter venue inside
