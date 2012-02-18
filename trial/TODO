@@ -11,13 +11,14 @@
 # - 2011 letter could remove
 # - activities, 1 attachment./new /edit /download /delete
 # - images news, 
+# - navigation:school, activity, news
 
 - news, 1 attachment. 
-
 - news , 3 images
 
 
-- navigation:school, activity, news
+- index page activity news
+
 - filter venue inside
 
 - about us, english/chinese content integration, translation.

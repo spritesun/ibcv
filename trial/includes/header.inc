@@ -60,33 +60,21 @@
 				<div class="right"><img src="img/nav-right.png"></div>
 				<ul>
 					<li><a href="./">首頁</a></li>
-					<li><a href="./">最新動態</a>
-						<ul>
-							<li><a href="./upcoming.asp">活動預告</a><li>
-							<li><a href="./whatsnew.asp">活動新聞</a></li>
-						</ul>
+					<li><a href="./activities.asp">活動預告</a></li>
+					<li><a href="./news.asp">活動新聞</a></li>
+					<li><a href="#">墨爾本道場</a>
+					  <ul>
+					    <li><a href="./melbourne.asp">佛光緣美術館</a></li>
+					    <li><a href="./boxhill.asp">博士山佛光緣</a></li>
+					  </ul>
 					</li>
-					<li><a href=".">墨爾本佛光山</a>
-						<ul>
-							<li><a href="./Yarraville/chinese-school.asp">中華學校</a></li>
-							<li><a href="./Yarraville/activities.asp">法會佛事</a></li>
-							<li><a href="./Yarraville/class-2010.asp">社教修持</a></li>
-						</ul>
+					<li><a href="#">中華學校</a>
+					  <ul>
+					    <li><a href="./Yarraville/chinese-school.asp">墨爾本佛光山</a></li>
+					    <li><a href="./BoxHill/chinese-school.asp">博士山佛光緣</a></li>
+					  </ul>
 					</li>
-					<li><a href="./melbourne.asp">墨爾本美術館</a>
-						<ul>
-							<li><a href="./ArtGallery/activities.asp">法會佛事</a></li>
-							<li><a href="./ArtGallery/class-2010.asp">社教修持</a></li>
-						</ul>
-					</li>
-					<li><a href="./boxhill.asp">博士山佛光緣</a>
-						<ul>
-							<li><a href="./BoxHill/chinese-school.asp">中華學校</a></li>
-							<li><a href="./BoxHill/activities.asp">法會佛事</a></li>
-							<li><a href="./BoxHill/class-2010.asp">社教修持</a></li>
-						</ul>
-					</li>
-					<li><a href="">佛光人</a>
+					<li><a href="#">佛光人</a>
 						<ul>
 							<li><a href="./bio.asp">星雲大師</a></li>
 							<li><a href="./international.asp">國際佛光會墨爾本協會</a></li>
