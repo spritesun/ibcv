@@ -4,7 +4,7 @@
 
 <div class="grid_14 prefix_1 suffix_1">
 <%
-dim id_, activity, name, date_, time_, venue, content, image1_file_name, attach1_file_name
+dim id_, activity, name, date_, time_, venue, content, image1_file_name, attach1_file_name, attach1_origin_name
 id_ = Request.QueryString("id")
 if (id_<>"") then
   set activity = execute_sql("select * from activities where ID_no=" & id_)
@@ -15,6 +15,7 @@ if (id_<>"") then
   content = activity("content")
   image1_file_name = activity("image1_file_name")
   attach1_file_name = activity("attach1_file_name")
+  attach1_origin_name = activity("attach1_origin_name")
 end if
 %>
 
@@ -38,7 +39,7 @@ end if
 if image1_file_name <> "" then
 %>
       <img src="../uploads/<%=image1_file_name%>" alt="activity_image1"></img>
-      <a href="./admin/delete_activity_image.asp?id=<%=id_%>">删除舊的圖片</a>
+      <a href="./admin/delete_activity_image.asp?id=<%=id_%>" class="delete">删除</a>
 <%
 end if
 %>
@@ -52,8 +53,8 @@ end if
 <%
 if attach1_file_name <> "" then
 %>
-      <a href="./admin/download_activity_attach.asp?id=<%=id_%>">下載附件</a>
-      <a href="./admin/delete_activity_attach.asp?id=<%=id_%>">删除舊的附件</a>
+      <span>下載:</span><a href="../uploads/<%=attach1_file_name%>" class="file"><%=attach1_origin_name%></a>
+      <a href="./admin/delete_activity_attach.asp?id=<%=id_%>" class="delete">删除</a>
 <%
 end if
 %>

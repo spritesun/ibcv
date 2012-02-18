@@ -19,6 +19,10 @@ end if
     <p>地點: <%=activity("venue")%></p>
     <br />
     <p><%=activity("content")%></p>
+    <p>
+      <span>此處下載:</span>
+      <a href="../uploads/<%=activity("attach1_file_name")%>" class="file"><%=activity("attach1_origin_name")%></a>
+    </p>
   </div>
 </div>
 
