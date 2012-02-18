@@ -6,21 +6,25 @@
 # - refactor new/edit, create/save
 # - fix existing ui issue
 # - refactor relative path  
+# - upload image for /new activity, /view image, /edit image, /delete image
+# - activities, 1 image
+# - 2011 letter could remove
 
-- upload image for /new activity, /view image, /edit image, delete image
+> - activities, 1 attachment.
 
-- activities, 1 image
+- news, 1 attachment. /new /edit download  delete
+
 - news , 3 images
-
-- plain text
-- 2011 letter could remove
 - images news, 
+
 - navigation:school, activity, news
 - filter venue inside
-- activities, news, 1 attachment.
+
 - about us, english/chinese content integration, translation.
 - english, chinese content.
 - draft status?
 
 - merge with existing content:news & activities
 - google map link for venue
+
+- does not remove the old attach/image file in server actually.

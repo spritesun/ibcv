@@ -54,19 +54,24 @@ td
 	padding: 3px 10px 3px 5px;
 }
 
-h1,h2 {
+h1,h2,h3 {
 	color: #e49521;
-}h1
-{
+}
+
+h1 {
 	font-size: 2.2em;
 }
 
-h2
-{
+h2 {
 	font-size: 1.6em;
 	margin: 1em 0 0.5em;
-}p
-{
+}
+
+h3 {
+	font-size: 1.3em;
+}
+
+p {
 	margin-bottom: 0.5em;
 }
 
@@ -488,18 +493,22 @@ textarea {
   font-size: 150%;
 }
 
-.edit_image img {
+.upload_management_sect img {
   width:280px;
 }
 
-.edit_image a {
+.upload_management_sect a {
   font-size: 150%;
   color: red;
   font-weight: bold;
 }
 
-.edit_image a:hover {
+.upload_management_sect a:hover {
   text-decoration: underline;
   color: blue;
 }
 
+.upload_management_sect span {
+  color: #e49521;
+  font-size: 1.3em;
+}
