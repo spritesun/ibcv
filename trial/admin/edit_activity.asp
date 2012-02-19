@@ -12,6 +12,7 @@ if (id_<>"") then
   date_ = activity("date")
   time_ = activity("time")
   venue = activity("venue")
+  summary = activity("summary")
   content = activity("content")
   image1_file_name = activity("image1_file_name")
   attach1_file_name = activity("attach1_file_name")
@@ -29,6 +30,8 @@ end if
     <input type="text" name="time" value="<%=time_%>"/>
     <h2>地點</h2>
     <input type="text" name="venue" value="<%=venue%>"/>
+    <h2>摘要（將會顯示在首頁）</h2>
+    <textarea rows="10" cols="60" name="summary"><%=summary%></textarea>
     <h2>内容介紹</h2>
     <textarea rows="20" cols="60" name="content"><%=content%></textarea>
 

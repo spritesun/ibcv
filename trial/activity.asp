@@ -18,11 +18,19 @@ end if
     <p>時間: <%=activity("date")%>， <%=activity("time")%></p>
     <p>地點: <%=activity("venue")%></p>
     <br />
-    <p><%=activity("content")%></p>
+    <p><%=Replace(activity("content"), vbCr, "<br>")%></p>
+    
+    <%
+    if activity("attach1_file_name") <> "" then
+    %>    
     <p>
       <span>此處下載:</span>
       <a href="../uploads/<%=activity("attach1_file_name")%>" class="file"><%=activity("attach1_origin_name")%></a>
     </p>
+    <%
+    end if
+    %>
+    
   </div>
 </div>
 
@@ -40,7 +48,7 @@ end if
 </div><!-- end of middle-->
 
 
-<div class="grid_14 prefix_1">
+<!--div class="grid_14 prefix_1">
   <hr style="width:100%;"></hr>
 </div>
 
@@ -51,6 +59,6 @@ end if
     下一條：<a href="activity.asp?id=next">建設中</a>
     </p>
   </div>
-</div>
+</div-->
 
 <!--#include file="includes/footer.inc"-->

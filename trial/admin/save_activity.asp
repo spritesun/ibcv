@@ -58,11 +58,12 @@ name = Upload.Form("name")
 date_ = Upload.Form("date")
 time_ = Upload.Form("time")
 venue = Upload.Form("venue")
+summary = Upload.Form("summary")
 content = Upload.Form("content")
 id_ = Upload.Form("id")
 
 if id_="" then
-  strSQL = "INSERT INTO activities ([name], [date], [time], [venue], [content]) VALUES ('" & name & "', '" &  date_ & "', '" & time_ & "', '" & venue & "', '" &  content & "');"
+  strSQL = "INSERT INTO activities ([name], [date], [time], [venue],[summary], [content]) VALUES ('" & name & "', '" &  date_ & "', '" & time_ & "', '" & venue & "', '" & summary & "', '" &  content & "');"
   set result = execute_sql(strSQL)
   
   if Upload.UploadedFiles.Exists("image1") or Upload.UploadedFiles.Exists("attach1") then
@@ -75,7 +76,7 @@ if id_="" then
   end if
 else
   'editing
-  strSQL = fmt("UPDATE activities SET [name] = '%x', [date] = '%x', [time] = '%x', [venue] = '%x', [content] = '%x' where ID_no = %x;", Array(name, date_, time_, venue, content, id_))
+  strSQL = fmt("UPDATE activities SET [name] = '%x', [date] = '%x', [time] = '%x', [venue] = '%x',[summary]='%x', [content] = '%x' where ID_no = %x;", Array(name, date_, time_, venue, summary, content, id_))
   set result = execute_sql(strSQL)
     
   update_image()

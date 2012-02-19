@@ -13,21 +13,21 @@
 # - images news, 
 # - navigation:school, activity, news
 # - index page activity news
-- input old activity in index page into database
+# - remove the old attach/image file in server actually.
+# - input old activity in index page into database
 
+- news
 - news, 1 attachment. 
 - news , 3 images
 
-
-
-
-- filter venue inside
-
-- about us, english/chinese content integration, translation.
-- english, chinese content.
-- draft status?
-
-- merge with existing content:news & activities
 - google map link for venue
 
-- does not remove the old attach/image file in server actually.
+
+- merge with existing content:news & activities
+
+- english, chinese content.
+
+
+?- about us, english/chinese content integration, translation.
+?- filter venue inside
+?- draft status

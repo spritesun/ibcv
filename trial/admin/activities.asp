@@ -20,7 +20,7 @@
 <!--#include file="../includes/function_execute_sql.inc"-->	
 <%
 dim activities
-set activities = execute_sql("select * from activities;")
+set activities = execute_sql("select * from activities order by date desc;")
 
 do while not activities.EOF
   dim rowHTMLStr

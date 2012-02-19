@@ -3,15 +3,19 @@
 </div>
 <script type="text/javascript">
 
-    var currentNews = 'buddhaLightHuiXiang';
+    var currentNews = "";
 
 function displayNews(name)
 {
+  if (currentNews === name) {
+    return;
+  }
+  if (currentNews !== "") {
     Effect.Fade(currentNews);
-    currentNews = name;
-    Effect.Appear(currentNews);
+  }
+  currentNews = name;
+  Effect.Appear(currentNews);
 }
-
 </script>
 
 
@@ -19,13 +23,10 @@ function displayNews(name)
 	<img src="img/photo-heading.png">
 	<div id="slide-show">
         <ul id="slide-images">
-        <li><a href="img/photo/143D.jpg" rel="lightbox-cats" style="width:215px;height:143px;"><img src="img/photo/143D.jpg" alt="143D" width="215" height="143"/></a>     </li>
-        <li><a href="img/photo/143E.jpg" rel="lightbox-cats" style="width:215px;height:161px;"><img src="img/photo/143E.jpg" alt="143E" width="215" height="161"/></a>     </li>
-        
 <%
 dim activities, rowHTMLStr
 
-set activities = execute_sql("select * from activities where image1_file_name <> '';")
+set activities = execute_sql("select * from activities where image1_file_name <> '' order by date desc;")
 do while not activities.EOF
   rowHTMLStr = fmt("<li><a href='../uploads/%x' title='<a href=./activity.asp?id=%x>%x</a>' rel='lightbox-cats'><img src='../uploads/%x' alt='%x' width='215' height='160'/></a></li>", Array(activities("image1_file_name"), activities("ID_no"), activities("name"), activities("image1_file_name"), activities("image1_file_name")))
   Response.Write rowHTMLStr
@@ -35,6 +36,8 @@ loop
 activities.Close
 set activities = Nothing
 %>
+          <li><a href="img/photo/143D.jpg" rel="lightbox-cats" style="width:215px;height:143px;"><img src="img/photo/143D.jpg" alt="143D" width="215" height="143"/></a>     </li>
+          <li><a href="img/photo/143E.jpg" rel="lightbox-cats" style="width:215px;height:161px;"><img src="img/photo/143E.jpg" alt="143E" width="215" height="161"/></a>     </li>
           <li><a href="img/photo/143F.jpg" rel="lightbox-cats" style="width:215px;height:120px;"><img src="img/photo/143F.jpg" alt="143F" width="215" height="120"/></a>     </li>
           <li><a href="img/photo/1440.jpg" rel="lightbox-cats" style="width:215px;height:161px;"><img src="img/photo/1440.jpg" alt="1430" width="215" height="161"/></a>     </li>
           <li><a href="img/photo/1441.jpg" rel="lightbox-cats" style="width:215px;height:143px;"><img src="img/photo/1441.jpg" alt="143D" width="215" height="143"/></a>     </li>
@@ -76,9 +79,20 @@ set activities = Nothing
 	<div class="content">
 		<ul>
 		<%
-    set activities = execute_sql("select * from activities;")
+    set activities = execute_sql("select * from activities order by date desc;")
+    dim isFirst
+    isFirst = True
     do while not activities.EOF
-      rowHTMLStr = fmt("<li><a href='./activity.asp?id=%x' onmouseover=""displayNews('activity_%x');""><span>%x</span>%x</a><br /><br /><div id='activity_%x' style='display:none;'>%x</div></li>", Array(activities("ID_no"), activities("ID_no"), activities("date"), activities("name"), activities("ID_no"), Left(activities("content"), 400) & "..."))
+      dim style
+      if isFirst then
+        style = "block"
+        Response.Write("<script type='text/javascript'> currentNews = 'activity_" & activities("ID_no") & "';</script>")
+        isFirst = False
+      else
+        style = "none"
+      end if
+
+      rowHTMLStr = fmt("<li><a href='./activity.asp?id=%x' onmouseover=""displayNews('activity_%x');""><span>%x</span>%x</a><br /><br /><div id='activity_%x' style='display:%x;'>%x</div></li>", Array(activities("ID_no"), activities("ID_no"), activities("date"), activities("name"), activities("ID_no"),style, activities("summary") & "..."))
       Response.Write rowHTMLStr
       activities.MoveNext
     loop
@@ -86,7 +100,6 @@ set activities = Nothing
     activities.Close
     set activities = Nothing
     %>
-	  <!--#include file="includes/old_activities.asp"-->
 		</ul>
 	</div>
 	<img src="img/news-heading.png">

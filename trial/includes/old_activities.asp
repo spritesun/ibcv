@@ -1,12 +1,3 @@
-  <li>
-      <a href="activities/jan/lunarNewYear2011.asp" onmouseover="displayNews('lunarNewYear');">
-      新春活動
-      </a>
-      <div id="lunarNewYear">
-      	    <a href="img/photo/poster/cny2011.jpg" rel="lightbox-cats1" style="width:860px;height:608px;padding-top:50px;"><img src="img/photo/poster/cny2011sml.jpg" width="280px" height="198px"></a>     
-	</div>
-      </a>
-  </li>				
 <li>
    <a href="activities/jan/buddhalight.asp" onmouseover="displayNews('buddhaLightHuiXiang');">
 	<span>2011年1月15日 至 16日</span> 

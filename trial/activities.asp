@@ -1,7 +1,7 @@
 <!--#include file="includes/header.inc"-->
 <!--#include file="includes/function_custom.inc"-->
 
-<div class="grid_10 prefix_1 suffix_1">
+<div class="grid_14 prefix_1 suffix_1">
 	<div class="content">
 	  <h1>最新活動預告</h1>
 	  <table>
@@ -16,7 +16,7 @@
     <tbody>
     <%
     dim activities
-    set activities = execute_sql("select * from activities;")
+    set activities = execute_sql("select * from activities order by date desc;")
 
     do while not activities.EOF
       dim rowHTMLStr
