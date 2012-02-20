@@ -16,7 +16,8 @@
 # - remove the old attach/image file in server actually.
 # - input old activity in index page into database
 
-- news
+>>>- copying news
+
 - news, 1 attachment. 
 - news , 3 images
 
