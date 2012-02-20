@@ -49,6 +49,7 @@
           <%response.write(Year(Date)& "年" & Month(Date) & "月" & Day(Date) & "日" )%>
           <%response.write("星期" & GetCnDay(WeekDay(Date))) %>
           <%response.write(FormatDateTime(now, 3)) %>
+          (僅内部使用)
         </div>
         <div class="right">  
         </div>
@@ -65,10 +66,10 @@
             </ul>
           </li>
           <li>
-            <a href="./admin/news.asp">新聞管理</a>
+            <a href="./admin/news_list.asp">新聞管理</a>
             <ul>
-              <li><a href="./admin/news.asp">新聞列表</a></li>
-              <li><a href="./admin/new_news.asp">創建新聞</a></li>
+              <li><a href="./admin/news_list.asp">新聞列表</a></li>
+              <li><a href="./admin/edit_news.asp">創建新聞</a></li>
             </ul>
           </li>
           <li><a href="./admin/logout.asp">登出</a></li>
