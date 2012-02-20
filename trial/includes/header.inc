@@ -61,7 +61,7 @@
 				<ul>
 					<li><a href="./">首頁</a></li>
 					<li><a href="./activities.asp">活動預告</a></li>
-					<li><a href="./news.asp">活動新聞</a></li>
+					<li><a href="./news_list.asp">活動新聞</a></li>
 					<li><a href="#">墨爾本道場</a>
 					  <ul>
 					    <li><a href="./melbourne.asp">佛光緣美術館</a></li>
