@@ -8,16 +8,15 @@
 dim id_, news, name, date_, content, image1_file_name, image2_file_name, image3_file_name, attach1_file_name, attach1_origin_name
 
 sub render_image_section(image_file_name, index)
-  <%
+  dim rowHTMLStr
   if image_file_name <> "" then
-  %>
-  <img src="../uploads/<%=image_file_name%>" alt="news_image<%=index%>"></img>
-  <a href="./admin/delete_news_image.asp?id=<%=id_%>&image_index=<%=index%>" class="delete">删除</a>
-  <%
+    rowHTMLStr = "<img src='../uploads/%x' alt='news_image%x'></img>"
+    rowHTMLStr = rowHTMLStr & "<a href='./admin/delete_news_image.asp?id=%x&image_index=%x' class='delete'>删除</a>"
   end if
-  %>
-  <br/><span>上傳新的圖片<%=index%></span>
-  <input type="file" name="image<%=index%>" value=""/>
+  rowHTMLStr = rowHTMLStr & "<br/><span>上傳新的圖片%x</span>"
+  rowHTMLStr = rowHTMLStr & "<input type='file' name='image%x' value=''/>"
+  response.write(fmt(rowHTMLStr, Array(image_file_name, index, index, index, index, index)))
+  'TODO: array should be constructed according to branch
 end sub
 
 'init
@@ -49,9 +48,9 @@ end if
 
     <div class="upload_management_sect">
       <h2>管理新聞圖片</h2>
-      <% render_image_section(image1_file_name, "1") %>
-      <% render_image_section(image2_file_name, "2") %>
-      <% render_image_section(image3_file_name, "3") %>
+      <% render_image_section image1_file_name, "1" %>
+      <% render_image_section image2_file_name, "2" %>
+      <% render_image_section image3_file_name, "3" %>
     </div>
 
     <div class="upload_management_sect">
