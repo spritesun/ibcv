@@ -8,15 +8,16 @@
 dim id_, news, name, date_, content, image1_file_name, image2_file_name, image3_file_name, attach1_file_name, attach1_origin_name
 
 sub render_image_section(image_file_name, index)
-  dim rowHTMLStr
+  dim rowHTMLStr, params
   if image_file_name <> "" then
     rowHTMLStr = "<img src='../uploads/%x' alt='news_image%x'></img>"
+    
     rowHTMLStr = rowHTMLStr & "<a href='./admin/delete_news_image.asp?id=%x&image_index=%x' class='delete'>删除</a>"
+    rowHTMLStr = fmt(rowHTMLStr, Array(image_file_name, index, id_, index))
   end if
   rowHTMLStr = rowHTMLStr & "<br/><span>上傳新的圖片%x</span>"
-  rowHTMLStr = rowHTMLStr & "<input type='file' name='image%x' value=''/>"
-  response.write(fmt(rowHTMLStr, Array(image_file_name, index, index, index, index, index)))
-  'TODO: array should be constructed according to branch
+  rowHTMLStr = rowHTMLStr & "<input type='file' name='image%x' value=''/><br/><hr>"
+  response.write(fmt(rowHTMLStr, Array(index, index)))
 end sub
 
 'init
@@ -48,6 +49,8 @@ end if
 
     <div class="upload_management_sect">
       <h2>管理新聞圖片</h2>
+      <span class="notice">(如果圖片没有立即更新，請嘗試刷新頁面再查看)</span>
+      <hr>
       <% render_image_section image1_file_name, "1" %>
       <% render_image_section image2_file_name, "2" %>
       <% render_image_section image3_file_name, "3" %>

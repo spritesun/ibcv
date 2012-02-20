@@ -521,3 +521,17 @@ textarea {
 .upload_management_sect .file {
   color: blue;
 }
+
+.notice {
+  color: yellow;
+}
+
+a.news_image {
+  width:280px;
+  height:179px;
+}
+
+a.news_image img {
+  width:280px;
+  padding-top:10px;
+}
