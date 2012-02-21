@@ -17,8 +17,11 @@
 # - input old activity in index page into database
 # - copying news, testing more about news edit
 
->>>- public news_list asp and public news_list for index page
-when no image for news, what?
+# - public news_list asp and public news_list for index page
+
+- renew header in default page
+- add news images to crasouel
+- fix side bar
 
 - news, 1 attachment. 
 - news , 3 images

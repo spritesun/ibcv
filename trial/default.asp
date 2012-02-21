@@ -3,7 +3,21 @@
 </div>
 <script type="text/javascript">
 
-    var currentNews = "";
+var currentActivity = "";
+
+function displayActivity(name)
+{
+  if (currentActivity === name) {
+    return;
+  }
+  if (currentActivity !== "") {
+    Effect.Fade(currentActivity);
+  }
+  currentActivity = name;
+  Effect.Appear(currentActivity);
+}
+
+var currentNews = "";
 
 function displayNews(name)
 {
@@ -16,6 +30,7 @@ function displayNews(name)
   currentNews = name;
   Effect.Appear(currentNews);
 }
+
 </script>
 
 
@@ -86,13 +101,13 @@ set activities = Nothing
       dim style
       if isFirst then
         style = "block"
-        Response.Write("<script type='text/javascript'> currentNews = 'activity_" & activities("ID_no") & "';</script>")
+        Response.Write("<script type='text/javascript'> currentActivity = 'activity_" & activities("ID_no") & "';</script>")
         isFirst = False
       else
         style = "none"
       end if
 
-      rowHTMLStr = fmt("<li><a href='./activity.asp?id=%x' onmouseover=""displayNews('activity_%x');""><span>%x</span>%x</a><br /><br /><div id='activity_%x' style='display:%x;'>%x</div></li>", Array(activities("ID_no"), activities("ID_no"), activities("date"), activities("name"), activities("ID_no"),style, activities("summary") & "..."))
+      rowHTMLStr = fmt("<li><a href='./activity.asp?id=%x' onmouseover=""displayActivity('activity_%x');""><span>%x</span>%x</a><br /><br /><div id='activity_%x' style='display:%x;'>%x</div></li>", Array(activities("ID_no"), activities("ID_no"), activities("date"), activities("name"), activities("ID_no"),style, activities("summary") & "..."))
       Response.Write rowHTMLStr
       activities.MoveNext
     loop
@@ -102,9 +117,33 @@ set activities = Nothing
     %>
 		</ul>
 	</div>
+	
 	<img src="img/news-heading.png">
 	<div class="content">
 		<ul>
+		<%
+    set news = execute_sql("select * from news order by date desc;")
+    dim isFirstNews
+    isFirstNews = True
+    do while not news.EOF
+      dim newsStyle
+      if isFirstNews then
+        newsStyle = "block"
+        Response.Write("<script type='text/javascript'> currentNews = 'news_" & news("ID_no") & "';</script>")
+        isFirstNews = False
+      else
+        newsStyle = "none"
+      end if
+
+      rowHTMLStr = fmt("<li><a href='./news.asp?id=%x' onmouseover=""displayNews('news_%x');""><span>%x</span>%x</a><br /><br /><div id='news_%x' style='display:%x;'>%x</div></li>", Array(news("ID_no"), news("ID_no"), news("date"), news("name"), news("ID_no"),newsStyle, news("summary") & "..."))
+      Response.Write rowHTMLStr
+      news.MoveNext
+    loop
+
+    news.Close
+    set news = Nothing
+    %>
+
 		</ul>
 	</div>	
 </div>	
