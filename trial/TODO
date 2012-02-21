@@ -17,7 +17,8 @@
 # - input old activity in index page into database
 # - copying news, testing more about news edit
 
-- public news_list asp and public news_list for index page
+>>>- public news_list asp and public news_list for index page
+when no image for news, what?
 
 - news, 1 attachment. 
 - news , 3 images

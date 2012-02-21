@@ -14,11 +14,17 @@ do while not news.EOF
 %>
 <li>
 <div class="newsItem">
+
   <div class="newsImgContainer">
+  <% if news("image1_file_name") <> "" then %>
   <a href="news.asp?id=<%=news("ID_no")%>">
   <img src="../uploads/<%=news("image1_file_name")%>" class="newsImg" alt="image1"/></a>
   </a>
+  <% else %>
+  <div class="newsImg" style="height:1px;"/></div>
+  <% end if %>
   </div>
+
   <div class="newsDescr"><a href="news.asp?id=<%=news("ID_no")%>"><%=news("name")%></a><br /><%=news("summary")%>...</div>
 </div>
 </li>
