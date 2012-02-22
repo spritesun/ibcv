@@ -9,12 +9,11 @@ sub rm(file_name)
     file_sys.DeleteFile(file_name)
   end if
 end sub
-%>
 
-<%
 sub rm_in_uploads(file_name)
   file_name = Server.MapPath("../../uploads") & "\" & file_name
   rm(file_name)
 end sub
 %>
+
 

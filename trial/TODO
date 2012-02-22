@@ -16,15 +16,13 @@
 # - remove the old attach/image file in server actually.
 # - input old activity in index page into database
 # - copying news, testing more about news edit
-
+# - news, 1 attachment. 
+# - news , 3 images
 # - public news_list asp and public news_list for index page
+# - add news images to crasouel
 
 - renew header in default page
-- add news images to crasouel
-- fix side bar
-
-- news, 1 attachment. 
-- news , 3 images
+- fix side bar use new activities
 
 - google map link for venue
 

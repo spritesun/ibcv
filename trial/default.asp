@@ -38,7 +38,9 @@ function displayNews(name)
 	<img src="img/photo-heading.png">
 	<div id="slide-show">
         <ul id="slide-images">
+        
 <%
+'TODO: could improve to be a random way
 dim activities, rowHTMLStr
 
 set activities = execute_sql("select * from activities where image1_file_name <> '' order by date desc;")
@@ -50,18 +52,21 @@ loop
 
 activities.Close
 set activities = Nothing
+
+dim news
+
+set news = execute_sql("select * from news where image1_file_name <> '' order by date desc;")
+do while not news.EOF
+  rowHTMLStr = fmt("<li><a href='../uploads/%x' title='<a href=./news.asp?id=%x>%x</a>' rel='lightbox-cats'><img src='../uploads/%x' alt='%x' width='215' height='160'/></a></li>", Array(news("image1_file_name"), news("ID_no"), news("name"), news("image1_file_name"), news("image1_file_name")))
+  Response.Write rowHTMLStr
+  news.MoveNext
+loop
+
+news.Close
+set news = Nothing
 %>
-          <li><a href="img/photo/143D.jpg" rel="lightbox-cats" style="width:215px;height:143px;"><img src="img/photo/143D.jpg" alt="143D" width="215" height="143"/></a>     </li>
-          <li><a href="img/photo/143E.jpg" rel="lightbox-cats" style="width:215px;height:161px;"><img src="img/photo/143E.jpg" alt="143E" width="215" height="161"/></a>     </li>
-          <li><a href="img/photo/143F.jpg" rel="lightbox-cats" style="width:215px;height:120px;"><img src="img/photo/143F.jpg" alt="143F" width="215" height="120"/></a>     </li>
-          <li><a href="img/photo/1440.jpg" rel="lightbox-cats" style="width:215px;height:161px;"><img src="img/photo/1440.jpg" alt="1430" width="215" height="161"/></a>     </li>
-          <li><a href="img/photo/1441.jpg" rel="lightbox-cats" style="width:215px;height:143px;"><img src="img/photo/1441.jpg" alt="143D" width="215" height="143"/></a>     </li>
-          <li><a href="img/photo/1442.jpg" rel="lightbox-cats" style="width:215px;height:120px;"><img src="img/photo/1442.jpg" alt="143D" width="215" height="120"/></a>     </li>
-          <li><a href="img/photo/1443.jpg" rel="lightbox-cats" style="width:215px;height:120px;"><img src="img/photo/1443.jpg" alt="143D" width="215" height="120"/></a>     </li>
-          <li><a href="img/photo/1444.jpg" rel="lightbox-cats" style="width:215px;height:142px;"><img src="img/photo/1444.jpg" alt="143D" width="215" height="142"/></a>     </li>
-          <li><a href="img/photo/1445.jpg" rel="lightbox-cats" style="width:215px;height:120px;"><img src="img/photo/1445.jpg" alt="143D" width="215" height="120"/></a>     </li>
-          <li><a href="img/photo/1446.jpg" rel="lightbox-cats" style="width:215px;height:143px;"><img src="img/photo/1446.jpg" alt="143D" width="215" height="143"/></a>     </li>
-          <li><a href="img/photo/1447.jpg" rel="lightbox-cats" style="width:215px;height:143px;"><img src="img/photo/1447.jpg" alt="143D" width="215" height="143"/></a>     </li>
+
+      <!--#include file="includes/old_image_carrousel.asp"-->
         </ul>
         <DIV style="VERTICAL-ALIGN: top;font-size:1.3em; PADDING-TOP: -1.0em; padding-bottom:1em; TEXT-ALIGN: center">&nbsp;<span id="slideImg-text">1 of 11</span>&nbsp; 點擊看大圖&nbsp;</DIV>        
     </div>
