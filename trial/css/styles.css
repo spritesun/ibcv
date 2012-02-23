@@ -535,3 +535,19 @@ a.news_image img {
   width:280px;
   padding-top:10px;
 }
+
+.round-bar {
+  background: url(../img/nav-bg.png) repeat-x left top;
+  height:40px;
+  z-index: 500;
+  margin-bottom: 10px;
+}
+
+.round-bar span {
+  padding: 10px 15px;
+  color: white;
+  font-size: 1.8em;
+  letter-spacing: 2px;
+  display: block;
+}
+

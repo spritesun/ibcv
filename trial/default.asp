@@ -35,7 +35,7 @@ function displayNews(name)
 
 
 <div class="grid_4">
-	<img src="img/photo-heading.png">
+	<% round_bar("精彩照片") %>
 	<div id="slide-show">
         <ul id="slide-images">
         
@@ -70,13 +70,13 @@ set news = Nothing
         </ul>
         <DIV style="VERTICAL-ALIGN: top;font-size:1.3em; PADDING-TOP: -1.0em; padding-bottom:1em; TEXT-ALIGN: center">&nbsp;<span id="slideImg-text">1 of 11</span>&nbsp; 點擊看大圖&nbsp;</DIV>        
     </div>
-	<img src="img/video.png" />
+	<% round_bar("佛光視頻") %>
 	<div class="content">
 	<object width="215" height="180"><param name="movie" value="http://www.youtube.com/v/ojKz40yuhew?fs=1&amp;hl=en_US"></param>
 	<param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
 	<embed src="http://www.youtube.com/v/ojKz40yuhew?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="215" height="180"></embed></object>
 	</div>	
-	<img src="img/magazine.png" />
+	<% round_bar("人間福報") %>
 	<div>
 	<a href="" onclick="return open_EPAPER();"><img id="Epaper1_Image1" title="電子報紙導覽" src="http://www.merit-times.com.tw/image/epaper/epaper_20101231.jpg" style="width:215px;border-width:0px;padding-top:10px;padding-bottom:20px;" /></a> 
 <script language="javascript" type="text/javascript" > 
@@ -95,7 +95,7 @@ set news = Nothing
 </div>
 
 <div class="grid_8 latest_news">
-	<img src="img/zuixin-heading-long.png">
+  <% round_bar("活動預告") %>  
 	<div class="content">
 		<ul>
 		<%
@@ -123,7 +123,8 @@ set news = Nothing
 		</ul>
 	</div>
 	
-	<img src="img/news-heading.png">
+	<% round_bar("活動新聞") %>  
+
 	<div class="content">
 		<ul>
 		<%
