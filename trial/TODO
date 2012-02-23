@@ -21,17 +21,12 @@
 # - public news_list asp and public news_list for index page
 # - add news images to crasouel
 # - renew header in default page
+# - fix side bar use new activities
 
-- fix side bar use new activities
+later- english, chinese content.
 
-- google map link for venue
-
-
-- merge with existing content:news & activities
-
-- english, chinese content.
-
-
+?- google map link for venue
+?- merge with existing content:news & activities
 ?- about us, english/chinese content integration, translation.
 ?- filter venue inside
 ?- draft status

@@ -25,7 +25,7 @@ do while not news.EOF
   <% end if %>
   </div>
 
-  <div class="newsDescr"><a href="news.asp?id=<%=news("ID_no")%>"><%=news("name")%></a><br /><%=news("summary")%>...</div>
+  <div class="newsDescr"><a href="news.asp?id=<%=news("ID_no")%>"><%=news("name")%></a><br /><br /><%=news("summary")%>...</div>
 </div>
 </li>
 <%

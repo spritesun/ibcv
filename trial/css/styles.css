@@ -291,13 +291,10 @@ ol li
 }.right_col ul li
 {
 	display: block;
-	border-top: 1px solid #ccc;
-	padding: 5px 10px;
 }
 
 .right_col ul li span
 {
-	float: right;
 	text-align: right;
 	color: #E49521
 }
@@ -409,6 +406,7 @@ ol li
 	float:left;
 	padding-left:20px;
 }
+
 /* bottom
 --------------------------*/
 .bottom

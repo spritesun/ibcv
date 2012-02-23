@@ -68,11 +68,7 @@
 					    <li><a href="./boxhill.asp">博士山佛光緣</a></li>
 					  </ul>
 					</li>
-					<li><a>中華學校</a>
-					  <ul>
-					    <li><a href="./Yarraville/chinese-school.asp">墨爾本佛光山</a></li>
-					    <li><a href="./BoxHill/chinese-school.asp">博士山佛光緣</a></li>
-					  </ul>
+					<li><a href="./chinese-school.asp">中華學校</a>
 					</li>
 					<li><a>佛光人</a>
 						<ul>

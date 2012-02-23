@@ -43,7 +43,7 @@ function displayNews(name)
 'TODO: could improve to be a random way
 dim activities, rowHTMLStr
 
-set activities = execute_sql("select * from activities where image1_file_name <> '' order by date desc;")
+set activities = execute_sql("select top 10 * from activities where image1_file_name <> '' order by date desc;")
 do while not activities.EOF
   rowHTMLStr = fmt("<li><a href='../uploads/%x' title='<a href=./activity.asp?id=%x>%x</a>' rel='lightbox-cats'><img src='../uploads/%x' alt='%x' width='215' height='160'/></a></li>", Array(activities("image1_file_name"), activities("ID_no"), activities("name"), activities("image1_file_name"), activities("image1_file_name")))
   Response.Write rowHTMLStr
@@ -55,7 +55,7 @@ set activities = Nothing
 
 dim news
 
-set news = execute_sql("select * from news where image1_file_name <> '' order by date desc;")
+set news = execute_sql("select top 10 * from news where image1_file_name <> '' order by date desc;")
 do while not news.EOF
   rowHTMLStr = fmt("<li><a href='../uploads/%x' title='<a href=./news.asp?id=%x>%x</a>' rel='lightbox-cats'><img src='../uploads/%x' alt='%x' width='215' height='160'/></a></li>", Array(news("image1_file_name"), news("ID_no"), news("name"), news("image1_file_name"), news("image1_file_name")))
   Response.Write rowHTMLStr
@@ -99,7 +99,7 @@ set news = Nothing
 	<div class="content">
 		<ul>
 		<%
-    set activities = execute_sql("select * from activities order by date desc;")
+    set activities = execute_sql("select top 10 * from activities order by date desc;")
     dim isFirst
     isFirst = True
     do while not activities.EOF
@@ -128,7 +128,7 @@ set news = Nothing
 	<div class="content">
 		<ul>
 		<%
-    set news = execute_sql("select * from news order by date desc;")
+    set news = execute_sql("select top 10 * from news order by date desc;")
     dim isFirstNews
     isFirstNews = True
     do while not news.EOF
