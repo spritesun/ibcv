@@ -62,19 +62,19 @@
 					<li><a href="./">首頁</a></li>
 					<li><a href="./activities.asp">活動預告</a></li>
 					<li><a href="./news_list.asp">活動新聞</a></li>
-					<li><a href="#">墨爾本道場</a>
+					<li><a>墨爾本道場</a>
 					  <ul>
 					    <li><a href="./melbourne.asp">佛光緣美術館</a></li>
 					    <li><a href="./boxhill.asp">博士山佛光緣</a></li>
 					  </ul>
 					</li>
-					<li><a href="#">中華學校</a>
+					<li><a>中華學校</a>
 					  <ul>
 					    <li><a href="./Yarraville/chinese-school.asp">墨爾本佛光山</a></li>
 					    <li><a href="./BoxHill/chinese-school.asp">博士山佛光緣</a></li>
 					  </ul>
 					</li>
-					<li><a href="#">佛光人</a>
+					<li><a>佛光人</a>
 						<ul>
 							<li><a href="./bio.asp">星雲大師</a></li>
 							<li><a href="./international.asp">國際佛光會墨爾本協會</a></li>
@@ -82,7 +82,7 @@
 							<li><a href="./youth.asp">青年團</a></li>
 						</ul>
 					</li>					
-					<li><a href="#">功德園地</a>
+					<li><a>功德園地</a>
 						<ul>
 							<li><a href="./worship.asp">佛像供養</a></li>
 							<li><a href="./light.asp">光明燈</a></li>
