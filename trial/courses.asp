@@ -9,7 +9,6 @@
       <tr>
         <td>活動<br />Activities</td>
         <td>日期<br />Date</td>
-        <td>時間<br />Time</td>
         <td>地點<br />Venue</td>
       </tr>
     </thead>
@@ -20,7 +19,7 @@
 
     do while not activities.EOF
       dim rowHTMLStr
-      rowHTMLStr = fmt("<tr><td><a href='./activity.asp?id=%x'>%x</a></td><td>%x</td><td>%x</td><td>%x</td></tr>", Array(activities("ID_no"), activities("name"), activities("date"), activities("time"), activities("venue")))
+      rowHTMLStr = fmt("<tr><td><a href='./activity.asp?id=%x'>%x</a></td><td>%x</td><td>%x</td></tr>", Array(activities("ID_no"), activities("name"), activities("date"), activities("venue")))
       Response.Write rowHTMLStr
       activities.MoveNext
     loop
