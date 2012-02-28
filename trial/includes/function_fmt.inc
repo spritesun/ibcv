@@ -29,7 +29,7 @@ function fmt( str, args )
 
 				' expand from array.
 				elseif Mid(str,i+1,1)="x" then
-					res = res & CStr(args(pos))
+				  if not IsNull(args(pos)) then res = res & CStr(args(pos))
 					pos = pos+1
 					i = i + 1
 				end if

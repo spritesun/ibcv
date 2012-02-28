@@ -60,7 +60,12 @@
 				<div class="right"><img src="img/nav-right.png"></div>
 				<ul>
 					<li><a href="./">首頁</a></li>
-					<li><a href="./activities.asp">活動預告</a></li>
+					<li><a>活動預告</a>
+					  <ul>
+					    <li><a href="./ceremonies.asp">法會活動</a></li>
+					    <li><a href="./courses.asp">社教課程</a></li>
+					  </ul>
+					</li>
 					<li><a href="./news_list.asp">活動新聞</a></li>
 					<li><a>墨爾本道場</a>
 					  <ul>

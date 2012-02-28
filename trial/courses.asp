@@ -3,7 +3,7 @@
 
 <div class="grid_14 prefix_1 suffix_1">
 	<div class="content">
-	  <h1>最新活動預告</h1>
+	  <h1>社教課程</h1>
 	  <table>
     <thead>
       <tr>
@@ -16,7 +16,7 @@
     <tbody>
     <%
     dim activities
-    set activities = execute_sql("select * from activities order by date desc;")
+    set activities = execute_sql("select * from activities where category = 'course' order by date desc;")
 
     do while not activities.EOF
       dim rowHTMLStr
@@ -31,12 +31,8 @@
     </tbody>
     </table>
 	  
-  	<h1>過往活動</h1>
+  	<h1>過往課程</h1>
     <ul>
-      <li><a href="./upcoming.asp">2011 法會佛事</a><li>
-      <li><a href="./Yarraville/activities.asp">2010 墨爾本佛光山法會佛事</a></li>
-      <li><a href="./ArtGallery/activities.asp">2010 美術館法會佛事</a></li>
-      <li><a href="./BoxHill/activities.asp">2010 博士山法會佛事</a></li>
       <li><a href="./Yarraville/class-2010.asp">2010 墨爾本佛光山才藝班</a></li>
       <li><a href="./ArtGallery/class-2010.asp">2010 美術館才藝班</a></li>
       <li><a href="./BoxHill/class-2010.asp">2010 博士山才藝班</a></li>

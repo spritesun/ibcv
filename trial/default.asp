@@ -17,6 +17,20 @@ function displayActivity(name)
   Effect.Appear(currentActivity);
 }
 
+var currentCourse = "";
+
+function displayCourse(name)
+{
+  if (currentCourse === name) {
+    return;
+  }
+  if (currentCourse !== "") {
+    Effect.Fade(currentCourse);
+  }
+  currentCourse = name;
+  Effect.Appear(currentCourse);
+}
+
 var currentNews = "";
 
 function displayNews(name)
@@ -95,11 +109,11 @@ set news = Nothing
 </div>
 
 <div class="grid_8 latest_news">
-  <% round_bar("活動預告") %>  
+  <% round_bar("法會活動預告") %>  
 	<div class="content">
 		<ul>
 		<%
-    set activities = execute_sql("select top 10 * from activities order by date desc;")
+    set activities = execute_sql("select top 5 * from activities where category = 'ceremony' order by date desc;")
     dim isFirst
     isFirst = True
     do while not activities.EOF
@@ -123,12 +137,38 @@ set news = Nothing
 		</ul>
 	</div>
 	
+	<% round_bar("社教課程預告") %>  
+	<div class="content">
+		<ul>
+		<%
+    set activities = execute_sql("select top 5 * from activities where category = 'course' order by date desc;")
+    isFirst = True
+    do while not activities.EOF
+      if isFirst then
+        style = "block"
+        Response.Write("<script type='text/javascript'> currentCourse = 'activity_" & activities("ID_no") & "';</script>")
+        isFirst = False
+      else
+        style = "none"
+      end if
+
+      rowHTMLStr = fmt("<li><a href='./activity.asp?id=%x' onmouseover=""displayCourse('activity_%x');""><span>%x</span>%x</a><br /><br /><div id='activity_%x' style='display:%x;'>%x</div></li>", Array(activities("ID_no"), activities("ID_no"), activities("date"), activities("name"), activities("ID_no"),style, activities("summary") & "..."))
+      Response.Write rowHTMLStr
+      activities.MoveNext
+    loop
+
+    activities.Close
+    set activities = Nothing
+    %>
+		</ul>
+	</div>
+  
 	<% round_bar("活動新聞") %>  
 
 	<div class="content">
 		<ul>
 		<%
-    set news = execute_sql("select top 10 * from news order by date desc;")
+    set news = execute_sql("select top 5 * from news order by date desc;")
     dim isFirstNews
     isFirstNews = True
     do while not news.EOF

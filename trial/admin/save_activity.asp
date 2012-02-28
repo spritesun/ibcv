@@ -55,6 +55,7 @@ uploadsDirVar = Server.MapPath("../../uploads")
 Set Upload = New FreeASPUpload
 Upload.Upload
 name = Upload.Form("name")
+category = Upload.Form("category")
 date_ = Upload.Form("date")
 time_ = Upload.Form("time")
 venue = Upload.Form("venue")
@@ -63,7 +64,7 @@ content = Upload.Form("content")
 id_ = Upload.Form("id")
 
 if id_="" then
-  strSQL = "INSERT INTO activities ([name], [date], [time], [venue],[summary], [content]) VALUES ('" & name & "', '" &  date_ & "', '" & time_ & "', '" & venue & "', '" & summary & "', '" &  content & "');"
+  strSQL = "INSERT INTO activities ([name], [category], [date], [time], [venue],[summary], [content]) VALUES ('" & name & "', '" &  category & "', '" &  date_ & "', '" & time_ & "', '" & venue & "', '" & summary & "', '" &  content & "');"
   set result = execute_sql(strSQL)
   
   if Upload.UploadedFiles.Exists("image1") or Upload.UploadedFiles.Exists("attach1") then
@@ -76,7 +77,7 @@ if id_="" then
   end if
 else
   'editing
-  strSQL = fmt("UPDATE activities SET [name] = '%x', [date] = '%x', [time] = '%x', [venue] = '%x',[summary]='%x', [content] = '%x' where ID_no = %x;", Array(name, date_, time_, venue, summary, content, id_))
+  strSQL = fmt("UPDATE activities SET [name] = '%x', [category] = '%x', [date] = '%x', [time] = '%x', [venue] = '%x',[summary]='%x', [content] = '%x' where ID_no = %x;", Array(name, category, date_, time_, venue, summary, content, id_))
   set result = execute_sql(strSQL)
     
   update_image()

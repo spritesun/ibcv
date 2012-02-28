@@ -8,10 +8,11 @@
 <table>
 <thead>
   <tr>
-    <td>活動<br />Activities</td>
-    <td>日期<br />Date</td>
-    <td>時間<br />Time</td>
-    <td>地點<br />Venue</td>
+    <td>活動</td>
+    <td>類别</td>
+    <td>日期</td>
+    <!--td>時間</td-->
+    <td>地點</td>
     <td>操作</td>
   </tr>
 </thead>
@@ -19,12 +20,18 @@
 <!--#include file="../includes/function_fmt.inc"-->	
 <!--#include file="../includes/function_execute_sql.inc"-->	
 <%
-dim activities
+dim activities, rowHTMLStr, category
 set activities = execute_sql("select * from activities order by date desc;")
 
 do while not activities.EOF
-  dim rowHTMLStr
-  rowHTMLStr = fmt("<tr><td>%x</td><td>%x</td><td>%x</td><td>%x</td><td><a href='./activity.asp?id=%x'>查看</a> <a href='./admin/edit_activity.asp?id=%x'>修改</a> <a href='./admin/delete_activity.asp?id=%x'>删除</a></td></tr>", Array(activities("name"), activities("date"), activities("time"), activities("venue"), activities("ID_no"), activities("ID_no"), activities("ID_no")))
+  category = activities("category")
+  if category = "ceremony" then
+    category = "法會活動"
+  elseif category = "course" then
+    category = "社教課程"
+  end if
+  
+  rowHTMLStr = fmt("<tr><td>%x</td><td>%x</td><td>%x</td><td>%x</td><td><a href='./activity.asp?id=%x'>查看</a> <a href='./admin/edit_activity.asp?id=%x'>修改</a> <a href='./admin/delete_activity.asp?id=%x'>删除</a></td></tr>", Array(activities("name"), category, activities("date"), activities("venue"), activities("ID_no"), activities("ID_no"), activities("ID_no")))
   Response.Write rowHTMLStr
   activities.MoveNext
 loop

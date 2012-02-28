@@ -4,11 +4,12 @@
 
 <div class="grid_14 prefix_1 suffix_1">
 <%
-dim id_, activity, name, date_, time_, venue, content, image1_file_name, attach1_file_name, attach1_origin_name
+dim id_, activity, name, category, date_, time_, venue, content, image1_file_name, attach1_file_name, attach1_origin_name
 id_ = Request.QueryString("id")
 if (id_<>"") then
   set activity = execute_sql("select * from activities where ID_no=" & id_)
   name = activity("name")
+  category = activity("category")
   date_ = activity("date")
   time_ = activity("time")
   venue = activity("venue")
@@ -22,8 +23,13 @@ end if
 
   <form action="./admin/save_activity.asp" method="post" enctype="multipart/form-data"  accept-charset="utf-8">
     <input type="hidden" name="id" value="<%=id_%>"/>
-    <h2>通告名稱</h2>
+    <h2>活動名稱</h2>
     <input type="text" name="name" value="<%=name%>"/>
+    <h2>活動類别</h2>
+    <select name="category">
+      <option value="ceremony" <% if (category = "ceremony") then Response.write("selected='selected'") %> >法會活動</option>
+      <option value="course" <% if (category = "course") then Response.write("selected='selected'") %> >社教課程</option>
+    </select>
     <h2>日期</h2>
     <input type="text" name="date" value="<%=date_%>"/>
     <h2>時間</h2>
@@ -36,7 +42,7 @@ end if
     <textarea rows="20" cols="60" name="content"><%=content%></textarea>
 
     <div class="upload_management_sect">
-      <h2>管理通告圖片</h2>
+      <h2>管理活動圖片</h2>
 
 <%
 if image1_file_name <> "" then
@@ -51,7 +57,7 @@ end if
     </div>
 
     <div class="upload_management_sect">
-      <h2>管理通告附件</h2>
+      <h2>管理活動附件</h2>
 
 <%
 if attach1_file_name <> "" then
@@ -65,7 +71,7 @@ end if
       <input type="file" name="attach1" value=""/>
     </div>
 
-    <input type="submit" value="提交通告"/>
+    <input type="submit" value="提交活動"/>
   </form>
 
 </div>
