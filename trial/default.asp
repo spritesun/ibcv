@@ -114,19 +114,10 @@ set news = Nothing
 		<ul>
 		<%
     set activities = execute_sql("select top 5 * from activities where category = 'ceremony' order by date desc;")
-    dim isFirst
-    isFirst = True
     do while not activities.EOF
-      dim style
-      if isFirst then
-        style = "block"
-        Response.Write("<script type='text/javascript'> currentActivity = 'activity_" & activities("ID_no") & "';</script>")
-        isFirst = False
-      else
-        style = "none"
-      end if
+      Response.Write("<script type='text/javascript'> currentActivity = 'activity_" & activities("ID_no") & "';</script>")
 
-      rowHTMLStr = fmt("<li><a href='./activity.asp?id=%x' onmouseover=""displayActivity('activity_%x');""><span>%x</span>%x</a><br /><br /><div id='activity_%x' style='display:%x;'>%x</div></li>", Array(activities("ID_no"), activities("ID_no"), activities("date"), activities("name"), activities("ID_no"),style, activities("summary") & "..."))
+      rowHTMLStr = fmt("<li><a href='./activity.asp?id=%x' onmouseover=""displayActivity('activity_%x');""><span>%x</span>%x</a><br /><div id='activity_%x' style='display:none;'>%x</div></li>", Array(activities("ID_no"), activities("ID_no"), activities("date"), activities("name"), activities("ID_no"), activities("summary") & "..."))
       Response.Write rowHTMLStr
       activities.MoveNext
     loop
@@ -135,24 +126,14 @@ set news = Nothing
     set activities = Nothing
     %>
 		</ul>
-	</div>
-	
 	<% round_bar("社教課程預告") %>  
-	<div class="content">
 		<ul>
 		<%
     set activities = execute_sql("select top 5 * from activities where category = 'course' order by date desc;")
-    isFirst = True
     do while not activities.EOF
-      if isFirst then
-        style = "block"
-        Response.Write("<script type='text/javascript'> currentCourse = 'activity_" & activities("ID_no") & "';</script>")
-        isFirst = False
-      else
-        style = "none"
-      end if
+      Response.Write("<script type='text/javascript'> currentCourse = 'activity_" & activities("ID_no") & "';</script>")
 
-      rowHTMLStr = fmt("<li><a href='./activity.asp?id=%x' onmouseover=""displayCourse('activity_%x');""><span>%x</span>%x</a><br /><br /><div id='activity_%x' style='display:%x;'>%x</div></li>", Array(activities("ID_no"), activities("ID_no"), activities("date"), activities("name"), activities("ID_no"),style, activities("summary") & "..."))
+      rowHTMLStr = fmt("<li><a href='./activity.asp?id=%x' onmouseover=""displayCourse('activity_%x');""><span>%x</span>%x</a><br /><div id='activity_%x' style='display:none;'>%x</div></li>", Array(activities("ID_no"), activities("ID_no"), activities("date"), activities("name"), activities("ID_no"), activities("summary") & "..."))
       Response.Write rowHTMLStr
       activities.MoveNext
     loop
@@ -161,27 +142,15 @@ set news = Nothing
     set activities = Nothing
     %>
 		</ul>
-	</div>
   
 	<% round_bar("活動新聞") %>  
-
-	<div class="content">
 		<ul>
 		<%
     set news = execute_sql("select top 5 * from news order by date desc;")
-    dim isFirstNews
-    isFirstNews = True
     do while not news.EOF
-      dim newsStyle
-      if isFirstNews then
-        newsStyle = "block"
-        Response.Write("<script type='text/javascript'> currentNews = 'news_" & news("ID_no") & "';</script>")
-        isFirstNews = False
-      else
-        newsStyle = "none"
-      end if
-
-      rowHTMLStr = fmt("<li><a href='./news.asp?id=%x' onmouseover=""displayNews('news_%x');""><span>%x</span>%x</a><br /><br /><div id='news_%x' style='display:%x;'>%x</div></li>", Array(news("ID_no"), news("ID_no"), news("date"), news("name"), news("ID_no"),newsStyle, news("summary") & "..."))
+      Response.Write("<script type='text/javascript'> currentNews = 'news_" & news("ID_no") & "';</script>")
+        
+      rowHTMLStr = fmt("<li><a href='./news.asp?id=%x' onmouseover=""displayNews('news_%x');""><span>%x</span>%x</a><br /><div id='news_%x' style='display:none;'>%x</div></li>", Array(news("ID_no"), news("ID_no"), news("date"), news("name"), news("ID_no"), news("summary") & "..."))
       Response.Write rowHTMLStr
       news.MoveNext
     loop
