@@ -70,7 +70,7 @@
 					<li><a>墨爾本道場</a>
 					  <ul>
 					    <li><a href="./melbourne.asp">佛光緣美術館</a></li>
-					    <li><a href="./boxhill.asp">博士山佛光緣</a></li>
+					    <li><a href="./boxhill.asp">佛光山尔有寺</a></li>
 					  </ul>
 					</li>
 					<li><a href="./chinese-school.asp">中華學校</a>
