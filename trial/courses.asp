@@ -28,14 +28,7 @@
     set activities = Nothing
     %>
     </tbody>
-    </table>
-	  
-  	<h1>過往課程</h1>
-    <ul>
-      <li><a href="./Yarraville/class-2010.asp">2010 墨爾本佛光山才藝班</a></li>
-      <li><a href="./ArtGallery/class-2010.asp">2010 美術館才藝班</a></li>
-      <li><a href="./BoxHill/class-2010.asp">2010 博士山才藝班</a></li>
-    </ul>
+    </table>	  
   </div>
 </div>
 <!--#include file="includes/footer.inc"-->
