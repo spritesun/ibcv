@@ -129,7 +129,7 @@ set news = Nothing
 	<% round_bar("社教課程預告") %>  
 		<ul>
 		<%
-    set activities = execute_sql("select top 5 * from activities where category = 'course' order by date desc;")
+    set activities = execute_sql("select top 10 * from activities where category = 'course' order by date desc;")
     do while not activities.EOF
       Response.Write("<script type='text/javascript'> currentCourse = 'activity_" & activities("ID_no") & "';</script>")
 
