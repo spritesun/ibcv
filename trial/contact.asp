@@ -12,7 +12,7 @@
 			<dd>89 Somerville Rd, Yarraville, Vic 3013, Australia</dd>
 			<dt>電話：</dt>
 			<dd>61-3-9314 5147</dd>
-			<dt>傳正：</dt>
+			<dt>傳真：</dt>
 			<dd>61-3-9314 2006</dd>
 			<dt>電郵：</dt>
 			<dd>ibcv@fgs.org.au</dd>
@@ -25,7 +25,7 @@
 			<dd>141 Queen Street, Melbourne 3000, Australia</dd>
 			<dt>電話：</dt>
 			<dd>61-3-9642 2388</dd>
-			<dt>傳正：</dt>
+			<dt>傳真：</dt>
 			<dd>61-3-9642 3288</dd>
 			<dt>電郵：</dt>
 			<dd>melb.artgallery@fgs.org.au</dd>
@@ -35,15 +35,17 @@
 		<h2>佛光山尔有寺</h2>
 		<dl>
 			<dt>地址：</dt>
-			<dd>24A Rutland Road, Box Hill, Vic 3128, Australia</dd>
+			<dd>42 Rutland Road, Box Hill, Vic 3128, Australia</dd>
 			<dt>電話：</dt>
 			<dd>61-3-9890 3996</dd>
-			<dt>傳正：</dt>
+			<dt>傳真：</dt>
 			<dd>61-3-9890 5831</dd>
 			<dt>電郵：</dt>
 			<dd>ibcvb@fgs.org.au</dd>
 			<dt>開放時間：</dt>
 			<dd>星期二 ~ 星期日, 9am ~ 5pm</dd>
+			<dt>滴水書坊：</dt>
+			<dd><br/>每週星期二至星期日<br/>午餐11：30-2：30<br/>茶點11：30-4：00<br/>* 星期一不對外開放（農曆初一十五除外）.</dd>			
 		</dl>
 		
 		<p><a href="http://www.fgs.org.tw/" target="_blank<p>">佛光山總本山</a></p>
