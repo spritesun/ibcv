@@ -37,9 +37,9 @@
 			<dt>地址：</dt>
 			<dd>42 Rutland Road, Box Hill, Vic 3128, Australia</dd>
 			<dt>電話：</dt>
-			<dd>61-3-9890 3996</dd>
+			<dd>61-3-9314 5147</dd>
 			<dt>傳真：</dt>
-			<dd>61-3-9890 5831</dd>
+			<dd>61-3-9914 2006</dd>
 			<dt>電郵：</dt>
 			<dd>ibcvb@fgs.org.au</dd>
 			<dt>開放時間：</dt>

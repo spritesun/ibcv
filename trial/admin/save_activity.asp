@@ -61,6 +61,7 @@ time_ = Upload.Form("time")
 venue = Upload.Form("venue")
 summary = Upload.Form("summary")
 content = Upload.Form("content")
+content = replace(content, "'", "''")
 id_ = Upload.Form("id")
 
 if id_="" then
